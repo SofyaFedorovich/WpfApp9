@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp5"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800 "Style="{DynamicResource WindowStyle}">
+        Title="MainWindow" Height="450" Width="800" Style="{DynamicResource WindowStyle}">
     <Window.CommandBindings>
         <CommandBinding Command="Open" Executed="OpenExecuted"/>
         <CommandBinding Command="Save" Executed="SaveExecuted"/>
@@ -17,7 +17,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition />
         </Grid.RowDefinitions>
-        <Menu Grid.Row="0" Margin="5" Padding="5" Background="#FFEEF5FD">
+        <Menu Margin="5" Padding="5" Style="{DynamicResource WindowStyle}">
             <MenuItem Header = "_Файл">
                 <MenuItem Header="_Открыть" Command="Open"/>
                 <MenuItem Header="_Сохранить" Command="Save"/>
@@ -32,6 +32,7 @@
                 <MenuItem Header="Вставить" Command="Paste"/>
             </MenuItem>
             <MenuItem Header="_Справка"></MenuItem>
+            <ComboBox Width="100" x:Name="styleBox"/>
         </Menu>
         <ToolBarTray Grid.Row="1" Style="{DynamicResource ToolBarStyle}">
             <ToolBar Margin="5" Padding="5" Style="{DynamicResource ToolBarStyle}">
@@ -53,8 +54,8 @@
                 </Button>
                 <Separator/>
                 </ToolBar>
-                <ToolBar Margin="5" Padding="5" Style="{DynamicResource ToolBarStyle}">>
-                <StackPanel VerticalAlignment="Center">
+                <ToolBar Margin="5" Padding="5" Style="{DynamicResource ToolBarStyle}">
+                    <StackPanel VerticalAlignment="Center">
                     <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
                     <RadioButton Content="Красный" Checked="RadioButton_Checked_1"/>
                 </StackPanel>
