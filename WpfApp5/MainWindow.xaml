@@ -53,7 +53,7 @@
                 </Button>
                 <Separator/>
                 </ToolBar>
-            <ToolBar Margin="5" Padding="5">
+                <ToolBar Margin="5" Padding="5" Style="{DynamicResource ToolBarStyle}">>
                 <StackPanel VerticalAlignment="Center">
                     <RadioButton Content="Черный" IsChecked="True" Checked="RadioButton_Checked"/>
                     <RadioButton Content="Красный" Checked="RadioButton_Checked_1"/>
